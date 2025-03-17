@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Manager</title>
+</head>
+<body>
+    <h1>Cookie Manager</h1>
+    <button onclick="fetchAndSetCookie()">Setze Benutzer-Cookie</button>
+    <h2>Gespeicherte Cookies</h2>
+    <p id="cookieDisplay"></p>
+    
+    <script>
+        function setCookie(name, value, days) {
+            let date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = name + "=" + value + "; expires=" + date.toUTCString() + "; path=/";
+        }
+
+        function fetchAndSetCookie() {
+            fetch('https://api64.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    setCookie('user_ip', data.ip, 7);
+                    alert('Cookie mit IP-Adresse gesetzt: ' + data.ip);
+                    displayCookies();
+                })
+                .catch(error => console.error('Fehler beim Abrufen der IP-Adresse:', error));
+        }
+
+        function displayCookies() {
+            document.getElementById('cookieDisplay').innerText = document.cookie;
+        }
+
+        window.onload = displayCookies;
+    </script>
+</body>
+</html>
