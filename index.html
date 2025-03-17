@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minecraft Navigation</title>
+<style>
+  @font-face {
+    font-family: 'Minecraftia';
+    src: url('Minecraftia-Regular.ttf') format('truetype');
+  }
+
+  body {
+    background: url('https://cdn.glitch.global/be172e35-3b21-40ce-86f5-96c6d8cfe7c3/MinecraftSplashScreen-master%2Ftitle%2Fbackground%2Fpanorama_1.png?v=1742119337131') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Minecraftia', sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    width: 500px;
+    margin-bottom: 20px;
+  }
+
+  .button {
+    background: #6A6A6A;
+    border: 2px solid #3C3C3C;
+    color: white;
+    font-size: 24px;
+    padding: 10px 140px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 0 #4A4A4A, inset 0 -2px 0 #2F2F2F, 4px 4px 0 #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Minecraft Button Hover Style */
+  .button:hover {
+    background: #8A8A8A;
+    box-shadow: inset 0 2px 0 #D3D3D3, inset 0 -2px 0 #A5A5A5, 4px 4px 0 #000000;
+  }
+
+  .button:active {
+    background: #555555;
+    box-shadow: inset 0 2px 0 #D3D3D3, inset 0 -2px 0 #A5A5A5, 4px 4px 0 #000000, 0 0 5px #666666;
+  }
+
+  .button:focus {
+    outline: 3px solid #ffcc00;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 12px;
+    color: #AAAAAA;
+  }
+</style>
+</head>
+<body>
+  <img src="https://cdn.glitch.global/be172e35-3b21-40ce-86f5-96c6d8cfe7c3/MinecraftSplashScreen-master%2Flogo.svg?v=1742119333601" alt="Minecraft Logo" class="logo">
+  <a href="1.html" class="button">Version 1.0</a><br>
+  <a href="2.html" class="button">Version 2.0</a><br>
+  
+  <div class="footer">Minecraft 1.20.1 | Copyright Mojang AB. Do not distribute!</div>
+</body>
+</html>
