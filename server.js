@@ -27,7 +27,7 @@ app.post("/save-cookie", (req, res) => {
 // Alle gespeicherten Cookies abrufen
 app.get("/get-cookies", (req, res) => {
     if (fs.existsSync(DB_FILE)) {
-        res.json(JSON.parse(fs.readFileSync(DB_FILE)));
+         res.json(JSON.parse(fs.readFileSync(DB_FILE)));
     } else {
         res.json([]);
     }
