@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} javis\.glitch\.me [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://javis.glitch.me/$1 [R,L]  
